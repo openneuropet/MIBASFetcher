@@ -13,4 +13,12 @@ Small Script/Tool That Gets MIBAS (And maybe versions of MIBAS)
   - Random Urls
   - GitAnnex Dataset 
   - Datalad Dataset
-2) Profit?
+2) Runs on
+  - Everywhere, Mac, Linux, Windows
+  
+## Where are we storing this data?
+
+Openneuro? FTP?
+
+## Add Flow Diagram
+

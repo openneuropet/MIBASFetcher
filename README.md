@@ -22,3 +22,5 @@ Openneuro? FTP?
 
 ## Add Flow Diagram
 
+## Create a First Draft w/ Datalad
+  make a datalad folder, and make datalad work for current MIBAS

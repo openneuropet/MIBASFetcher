@@ -1,6 +1,10 @@
 # MIBASFetcher
 Small Script/Tool That Gets MIBAS (And maybe versions of MIBAS)
 
+We need to be realistic about how well this will work/how much maintenance it will require on our end. In theory we can run CI on this and it will just work, but in reality that's rarely the case. 
+
+Discuss here and in issues. 
+
 
 ## Design Requirements
 
@@ -24,3 +28,4 @@ Openneuro? FTP?
 
 ## Create a First Draft w/ Datalad
   make a datalad folder, and make datalad work for current MIBAS
+ 

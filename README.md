@@ -24,7 +24,11 @@ Discuss here and in issues.
 
 Openneuro? FTP?
 
-## Add Flow Diagram
+## Flow Diagram e.g.
+
+If it get's more complicated then this I think we should stop.
+
+![Flow Diagram](mibasgetter.drawio.png)
 
 ## Create a First Draft w/ Datalad
   make a datalad folder, and make datalad work for current MIBAS

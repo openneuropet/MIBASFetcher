@@ -1,0 +1,15 @@
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/freesurfer/mni152/mni152.2mm.aparc%2Baseg.nii.gz?versionId=78IHsKIl8LFU_eWE95Uf_oiUqZ3rnQl.
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/freesurfer/mni152/mni152.2mm.nii.gz?versionId=._QXEfD8hmzW2SurbQS1m1dfwKEjJvRp
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.mean.nii.gz?versionId=UjYq6Vf2vq6RIhiuQXmaYYKvZ7iBgQ8r
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.std.nii.gz?versionId=Ysb9ZtLPhPfzAtYWRY4H5VHdDDnKd1Bh
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.mean.nii.gz?versionId=58YthOAPN1DyjHMJHrOM2sxaS1FcgfMD
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.mean.nii.gz?versionId=0vUW7sT2U3caDTglslyQIaODxBnVmQ0L
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.std.nii.gz?versionId=EDj5yIsUsCkEcX0LTwrB5SUvuSuMMIMb
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.std.nii.gz?versionId=KMK0LDFjZ36lETTyxV3JjEoCjdBxKJLL
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.mean.nii.gz?versionId=aNdamfpXh8WNYUpFi_YGIbuV1oaHaSH3
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.std.nii.gz?versionId=da9ZS2Dt8JFdwoNaoj5DFoUJ_fmWks67
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/roi.csv?versionId=DrefvLbtenbmGlpfRywDTXokCgtJ3Fa1
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/roi.ctab?versionId=_3LCjGPmrSDhKS_4qZZRqsY3S8BUhDEZ
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/roi.mean.nii.gz?versionId=ze2dQN1X3Aj3iRgCGCbJFdKuaFpBJtMr
+https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/roi.std.nii.gz?versionId=M_Z9Q5A3QUjbUBrKtgCn7zdPRui5LTKx
+https://s3.amazonaws.com/openneuro.org/ds004401/sub-dummy/anat/sub-dummy_T1w.nii.gz?versionId=OrNT68LQzqGt7GUsJydNrCloVZbYthTF

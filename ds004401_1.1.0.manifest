@@ -1,29 +1,29 @@
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.mean.nii.gz?versionId=UjYq6Vf2vq6RIhiuQXmaYYKvZ7iBgQ8r
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.std.nii.gz?versionId=Ysb9ZtLPhPfzAtYWRY4H5VHdDDnKd1Bh
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.mean.nii.gz?versionId=0vUW7sT2U3caDTglslyQIaODxBnVmQ0L
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.std.nii.gz?versionId=EDj5yIsUsCkEcX0LTwrB5SUvuSuMMIMb
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.mean.nii.gz?versionId=aNdamfpXh8WNYUpFi_YGIbuV1oaHaSH3
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.mean.nii.gz?versionId=tnlvTKLIWe1x6RuCTXQZ2N8cmUaanQwm
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.std.nii.gz?versionId=.7yXdU6QZt80ln6e3mnOujEzGDSf_ia3
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.std.nii.gz?versionId=da9ZS2Dt8JFdwoNaoj5DFoUJ_fmWks67
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.mean.nii.gz?versionId=58YthOAPN1DyjHMJHrOM2sxaS1FcgfMD
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.mean.nii.gz?versionId=VLlwbfJQYKfJCwvg_KJxB_8JS2fioUFe
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.std.nii.gz?versionId=KMK0LDFjZ36lETTyxV3JjEoCjdBxKJLL
-https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.std.nii.gz?versionId=bCIQBFuE38._Fja1v2ZmUgu1Wu0fxubR
-https://s3.amazonaws.com/openneuro.org/ds004401/sub-dummy/anat/sub-dummy_T1w.nii.gz?versionId=OrNT68LQzqGt7GUsJydNrCloVZbYthTF
-https://s3.amazonaws.com/openneuro.org/ds004401/sub-dummy/pet/sub-dummy_rec-DynTOF_pet.nii.gz?versionId=fglAvatABOLlYzDFRBbieGOpoRYpvWjF
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/CHANGES
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/README
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/dataset_description.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/.gitattributes
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/participants.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/participants.tsv
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-rh_space-fsaverage_mean.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-fsaverage_mean.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-fsaverage_std.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-lh_space-fsaverage_std.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-lh_space-fsaverage_mean.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-MNI305Lin_std.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-MNI305Lin_mean.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-rh_space-fsaverage_std.json
-http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/.datalad/config
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.mean.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.mean.nii.gz?versionId=UjYq6Vf2vq6RIhiuQXmaYYKvZ7iBgQ8r
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.std.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.lh.std.nii.gz?versionId=Ysb9ZtLPhPfzAtYWRY4H5VHdDDnKd1Bh
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.mean.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.mean.nii.gz?versionId=0vUW7sT2U3caDTglslyQIaODxBnVmQ0L
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.std.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.rh.std.nii.gz?versionId=EDj5yIsUsCkEcX0LTwrB5SUvuSuMMIMb
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.mean.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.mean.nii.gz?versionId=aNdamfpXh8WNYUpFi_YGIbuV1oaHaSH3
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.mean.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.mean.nii.gz?versionId=tnlvTKLIWe1x6RuCTXQZ2N8cmUaanQwm
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.std.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.std.nii.gz?versionId=.7yXdU6QZt80ln6e3mnOujEzGDSf_ia3
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.std.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/mni152.std.nii.gz?versionId=da9ZS2Dt8JFdwoNaoj5DFoUJ_fmWks67
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.mean.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.mean.nii.gz?versionId=58YthOAPN1DyjHMJHrOM2sxaS1FcgfMD
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.mean.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.mean.nii.gz?versionId=VLlwbfJQYKfJCwvg_KJxB_8JS2fioUFe
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.std.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.std.nii.gz?versionId=KMK0LDFjZ36lETTyxV3JjEoCjdBxKJLL
+ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.std.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/derivatives/petsurfer/mibas/ps13-ds004230/nomc.nopvc.nosm.logan.ts540/fsaverage.std.nii.gz?versionId=bCIQBFuE38._Fja1v2ZmUgu1Wu0fxubR
+ds004401/sub-dummy/anat/sub-dummy_T1w.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/sub-dummy/anat/sub-dummy_T1w.nii.gz?versionId=OrNT68LQzqGt7GUsJydNrCloVZbYthTF
+ds004401/sub-dummy/pet/sub-dummy_rec-DynTOF_pet.nii.gz https://s3.amazonaws.com/openneuro.org/ds004401/sub-dummy/pet/sub-dummy_rec-DynTOF_pet.nii.gz?versionId=fglAvatABOLlYzDFRBbieGOpoRYpvWjF
+ds004401/CHANGES http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/CHANGES
+ds004401/README http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/README
+ds004401/dataset_description.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/dataset_description.json
+ds004401/.gitattributes http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/.gitattributes
+ds004401/participants.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/participants.json
+ds004401/participants.tsv http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/participants.tsv
+ds004401/derivatives/mibas/atlas-ps13_desc-rh_space-fsaverage_mean.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-rh_space-fsaverage_mean.json
+ds004401/derivatives/mibas/atlas-ps13_res-2_space-fsaverage_mean.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-fsaverage_mean.json
+ds004401/derivatives/mibas/atlas-ps13_res-2_space-fsaverage_std.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-fsaverage_std.json
+ds004401/derivatives/mibas/atlas-ps13_desc-lh_space-fsaverage_std.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-lh_space-fsaverage_std.json
+ds004401/derivatives/mibas/atlas-ps13_desc-lh_space-fsaverage_mean.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-lh_space-fsaverage_mean.json
+ds004401/derivatives/mibas/atlas-ps13_res-2_space-MNI305Lin_std.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-MNI305Lin_std.json
+ds004401/derivatives/mibas/atlas-ps13_res-2_space-MNI305Lin_mean.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_res-2_space-MNI305Lin_mean.json
+ds004401/derivatives/mibas/atlas-ps13_desc-rh_space-fsaverage_std.json http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/derivatives/mibas/atlas-ps13_desc-rh_space-fsaverage_std.json
+ds004401/.datalad/config http://github.com/OpenNeuroDatasets/ds004401/blob/1.1.0/.datalad/config

@@ -21,7 +21,7 @@ def load_manifest_urls(file_path: Union[Path, str], dataset_name: str='', versio
             lines = [l.strip() for l in lines]
         for line in lines:
             filename, url = line.split(' ')
-            url_list['urls'].append({filename: url})
+            url_list.append({filename: url})
         return url_list
 
 def download_files(manifest_urls: list, destination: Union[Path, str]=Path('downloads/')) -> None:

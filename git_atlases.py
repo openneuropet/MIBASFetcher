@@ -71,7 +71,8 @@ for atlas in atlases.keys():
                 if url:
                     # write to dictionary as well
                     atlases[atlas]['version'][tag]['urls'].append(extract_path_from_url(url[0]))
-                    outfile.write(url[0] + '\n')
+                    tup = [(k, v) for k, v in extract_path_from_url(url[0]).items()][0]
+                    outfile.write(f"{tup[0]} {tup[1]}" + '\n')
                     print(extract_path_from_url(url=url[0]))
 
         # check all version files for symlinks, if local paths resolve to remote url and add to url list
@@ -85,8 +86,9 @@ for atlas in atlases.keys():
                         split_f_path = str(f_path).split(atlas, 1)[1]
                         remote_local_file = f"{atlases[atlas]['remote']}/blob/{tag}{split_f_path}"
                         atlases[atlas]['version'][tag]['urls'].append(extract_path_from_url(remote_local_file))
-                        outfile.write(remote_local_file + '\n')
-                        print(extract_path_from_url(url=remote_local_file))
+                        tup = [(k, v) for k, v in extract_path_from_url(remote_local_file).items()][0]
+                        outfile.write(f"{tup[0]} {tup[1]}" + '\n')
+                        #print(extract_path_from_url(url=remote_local_file))
     
 pretty_json = json.dumps(atlases, indent=2)
 

@@ -11,10 +11,10 @@ def remove_bids_path(url):
         dataset = re.search(r"ds\d+", url)[0]
         bids_path  = re.search(r"(\d+(?:\.\d+)+)\/(.*)", url)[2]
         full_path = os.path.join(dataset, bids_path)
-        return {'path': full_path, 'url': url}
+        return {full_path : url}
     if 'openneuro.org':
         bids_path = re.search(r".org\/(.*)(.*)?\?", url)[1]
-        return {'path': bids_path, 'url': url}
+        return {bids_path: url}
 
 url_regex = r"https:\/\/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&\/\/=]*)"
 

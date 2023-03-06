@@ -63,8 +63,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser('fetch_atlases', formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('-m', '--manifest', default='atlases.json', help=f"Manifest file containing url's of atlases, default file is located at:\n{str(Path(__file__).parent.resolve())}/atlases.json")
     parser.add_argument('-d', '--destination', default=cwd, help=f"Destination path to download atlas files to\ndefaults to curent working directory if left blank, e.g.\n{cwd}")
-    parser.add_argument('--dataset-name', default='', help=f"Name of the atlas/dataset to collect files from\nto see available atlases use the -s/--show-atlases argument e.g.\n--dataset-name ds004401\n")
-    parser.add_argument('--dataset-version', default='', help=f"The version of the atlas to download,\nto list available versions use the -s argument with the atlas name to show.\n--dataset-name <name> -s\n")
+    parser.add_argument('-n', '--dataset-name', default='', help=f"Name of the atlas/dataset to collect files from\nto see available atlases use the -s/--show-atlases argument e.g.\n--dataset-name ds004401\n")
+    parser.add_argument('-v', '--dataset-version', default='', help=f"The version of the atlas to download,\nto list available versions use the -s argument with the atlas name to show.\n--dataset-name <name> -s\n")
     parser.add_argument('-s', '--show-atlases', action='store_true', help="Include this flag to list available atlases and atlas versions")
 
     args = parser.parse_args()

@@ -3,13 +3,12 @@ import urllib.request
 import json
 import argparse
 import sys
+import time
 from typing import Union
 from pathlib import Path
-from argparse import RawTextHelpFormatter
-from os import getcwd
+from os import getcwd, devnull
 
 cwd = getcwd()
-
 
 def load_manifest_urls(file_path: Union[Path, str]='atlases.json', dataset_name: str='', version: str='') -> list:
     url_list = []
@@ -44,17 +43,19 @@ def download_files(manifest_urls: list, destination: Union[Path, str]=Path('down
                 print(f"Unable to download {name} from {url}")
                 print(err)
 
-def list_atlases(file_path, dataset_name: str=""):
+def list_atlases(file_path, dataset_name: str="", display=sys.stdout):
     if Path(file_path).exists() and Path(file_path).is_file():
         with open(file_path, 'r') as infile:
             atlases = json.load(infile)
             if not dataset_name:
                 for atlas in atlases.keys():
-                    print(atlas)
+                    print(atlas, file=display)
+                return []
             elif dataset_name:
                 versions = atlases[dataset_name]['version'].keys()
                 for version in versions:
-                    print(version)
+                    print(version, file=display)
+                return versions
     else:
         raise FileNotFoundError(f"No manifest file found at {file_path}.")
     
@@ -76,11 +77,31 @@ if __name__ == "__main__":
 
     elif args.dataset_name:
         if not args.dataset_version:
-            print(f"Specify a dataset version to download with the --dataset-version flag\n"
-                  f"To view available versions re-run previous command with -s or --show-atlases flag "
-                  f"e.g.\n\n./{' '.join(sys.argv)} -s\n", 
-                  file=sys.stderr)
-            sys.exit(1)
+            versions = list(list_atlases(args.manifest, args.dataset_name, display=open(devnull,'w')))
+            print(f'versions = {versions}')
+            # get latest version
+            versions.sort(reverse=True)
+            try:
+                latest = versions[0]
+            except IndexError:
+                lastest = None
+
+            print(f"No argument provided for --dataset-version, using latest version from {args.dataset_name}, version = {latest}")
+            print(f"Download will begin in 5 seconsd\nEnter ctrl c to cancel.")
+            time.sleep(5)
+
+            if latest:
+                urls = load_manifest_urls(args.manifest, dataset_name=args.dataset_name, version=latest)
+                # set up destination path
+                if args.dataset_name not in str(args.destination) and args.dataset_name:
+                    args.destination = Path(args.destination) / Path(args.dataset_name) / Path(latest)
+                download_files(urls, destination=args.destination)
+            else:
+                print(f"Specify a dataset version to download with the --dataset-version flag\n"
+                    f"To view available versions re-run previous command with -s or --show-atlases flag "
+                    f"e.g.\n\n./{' '.join(sys.argv)} -s\n", 
+                    file=sys.stderr)
+                sys.exit(1)
         else:
             urls = load_manifest_urls(args.manifest, dataset_name=args.dataset_name, version=args.dataset_version)
 

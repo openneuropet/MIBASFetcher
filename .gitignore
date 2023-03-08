@@ -3,3 +3,4 @@ ds00*/
 test_*
 dist/
 *__pycache__*
+downloads/

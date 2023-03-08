@@ -19,17 +19,3 @@ Discuss here and in issues.
   - Datalad Dataset
 2) Runs on
   - Everywhere, Mac, Linux, Windows
-  
-## Where are we storing this data?
-
-Openneuro? FTP?
-
-## Flow Diagram e.g.
-
-If it get's more complicated then this I think we should stop.
-
-![Flow Diagram](mibasgetter.drawio.png)
-
-## Create a First Draft w/ Datalad
-  make a datalad folder, and make datalad work for current MIBAS
- 

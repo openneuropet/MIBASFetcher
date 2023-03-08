@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mibasfetcher"
+version = "1.0.0"
+description = "fetches molecular atlases from openneuro (or url's)"
+authors = ["Anthony Galassi <28850131+bendhouseart@users.noreply.github.com>"]
+license = "CC 4.0"
+readme = "README.md"
+include = [ "atlases.json" ]
+
+[tool.poetry.scripts]
+mibasfetcher = "mibasfetcher.fetch_atlases:main"
+updatemibas = "mibasfetcher.git_atlases:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

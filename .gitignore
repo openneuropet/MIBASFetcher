@@ -1,3 +1,5 @@
 ds00*/
 .vscode/*
 test_*
+dist/
+*__pycache__*

@@ -1,0 +1,57 @@
+name: UpdateAtlases
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
+  schedule:
+    - cron: '0 7 * * 1'
+
+jobs:
+  checkout_and_update:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: main
+        token: ${{ secrets.MIBAS_FETCHER_API_TOKEN }}
+        fetch-depth: 0
+        persist-credentials: true
+    - name: Update atlases.json
+      run: |
+      python git_atlases.py
+      cksum atlases.json > atlases.json.cksum
+    - name: Check for Updates
+      id: updatesmade
+      run: |
+        git add --all
+        git status --porcelain
+        if [[ $(git status --porcelain | wc -l) -gt 0 ]]; then
+          echo "changesmade=true" >> $GITHUB_OUTPUT
+        else
+          echo "No atlas changes found in atlases.json"
+          echo "changesmade=false" >> $GITHUB_OUTPUT
+        fi
+    - name: Check Links in atlases.json
+      id: checklinks
+      run: |
+        ./checklinks
+    - name: Push Changes
+      if: ${{ steps.updatesmade.outputs.changesmade  == 'true '}}
+      env:
+        ACTOR: ${{ github.actor }}
+        OWNER: ${{ github.repository_owner }}
+      run: |
+        git config --global user.name "$ACTOR"
+        git config --global user.email "$ACTOR@noreply.com"
+        git add atlases.json*
+        git commit -m "Auto update atlases.json"
+        git push

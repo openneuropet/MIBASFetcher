@@ -8,6 +8,7 @@ import os
 from typing import Union
 
 
+
 def download_atlas_manifest(url: str, destination: Path):
     """
     Download the manifest file from the given url.
@@ -56,7 +57,7 @@ def main():
         remote_origin = subprocess.run(remote_origin_cmd, shell=True, capture_output=True, cwd=working_dir)
         stdout = remote_origin.stdout.decode().rstrip().rstrip('.git')
         remote_origin = stdout
-        atlases[atlas]['remote'] = remote_origin
+        atlases[atlas]['remote'] = remote_origin.replace('github.com', 'raw.githubusercontent.com')
 
     # generate s3 file manifest for each set of tags in each cloned repo
     for atlas in atlases.keys():
@@ -94,7 +95,7 @@ def main():
                             pass
                         else:
                             split_f_path = str(f_path).split(atlas, 1)[1]
-                            remote_local_file = f"{atlases[atlas]['remote']}/blob/{tag}{split_f_path}"
+                            remote_local_file = f"{atlases[atlas]['remote']}/{tag}{split_f_path}"
                             atlases[atlas]['version'][tag]['urls'].append(extract_path_from_url(remote_local_file))
                             tup = [(k, v) for k, v in extract_path_from_url(remote_local_file).items()][0]
                             outfile.write(f"{tup[0]} {tup[1]}" + '\n')

@@ -28,7 +28,6 @@ jobs:
     - name: Update atlases.json
       run: |
       python git_atlases.py
-      cksum atlases.json > atlases.json.cksum
     - name: Check for Updates
       id: updatesmade
       run: |
@@ -52,6 +51,6 @@ jobs:
       run: |
         git config --global user.name "$ACTOR"
         git config --global user.email "$ACTOR@noreply.com"
-        git add atlases.json*
+        git add mibasfetcher/atlases.json
         git commit -m "Auto update atlases.json"
         git push

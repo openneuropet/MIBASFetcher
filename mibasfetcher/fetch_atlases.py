@@ -7,12 +7,24 @@ import time
 import hashlib
 import tempfile
 import shutil
+import subprocess
 from typing import Union
 from pathlib import Path
 from os import getcwd, devnull
 
+
 cwd = getcwd()
 this_files_directory = Path(__file__).parent.absolute()
+
+def curl(url: str, destination: Union[Path, str]):
+    """
+    Download the file from the given url.
+    """
+    curl_call = subprocess.run(f"curl -L {url} -o {destination}", shell=True, check=True)
+    if curl_call.returncode != 0:
+        print(f"curl call failed with return code {curl_call.returncode}")
+    else:
+        return destination
 
 
 def md5(file_path: Path):
@@ -25,29 +37,35 @@ def md5(file_path: Path):
 
 
 def check_atlas_md5(
-        file_path: Union[Path,str]='atlases.json', 
-        atlases_url: str='https://github.com/openneuropet/MIBASFetcher/blob/main/mibasfetcher/atlases.json'):
+        file_path: Union[Path,str]=this_files_directory / Path('atlases.json'), 
+        atlases_url: str='https://raw.githubusercontent.com/openneuropet/MIBASFetcher/main/mibasfetcher/atlases.json'):
     """
     Check the md5 hash of a file and download a new version if the hash does not match.
     """
+    atlas_changed = False
     atlases_json_md5 = md5(file_path)
-    with tempfile.tempdir() as tmpdir:
+    with tempfile.TemporaryDirectory() as tmpdir:
         tmpfile = Path(tmpdir) / 'atlases.json'
         try:
-            atlases_json = urllib.request.urlopen(atlases_url, timeout=10)
-            open(tmpfile, 'wb').write(atlases_json.read())
+            atlases_json = curl(atlases_url, tmpfile)
+            #atlases_json = urllib.request.urlopen(atlases_url, timeout=10)
+            #open(tmpfile, 'wb').write(atlases_json.read())
             # get hash of new file
-            new_atlases_json_md5 = md5(file_path)
+            new_atlases_json_md5 = md5(tmpfile)
         except urllib.error.HTTPError as err:
             print(f"Unable to download {file_path} from {atlases_url}")
             print(f"Keeping local version of {file_path} with md5 hash: {atlases_json_md5}")
             print(err)
+            sys.exit(1)
 
         if new_atlases_json_md5 != atlases_json_md5:
             print(f"New version of {file_path} found. Updating from {atlases_url}")
             shutil.copy(tmpfile, file_path)
+            atlas_changed = True
         else:
             print(f"Local version of {file_path} is up to date.")
+    
+    return atlas_changed
 
 def load_manifest_urls(file_path: Union[Path, str]='atlases.json', dataset_name: str='', version: str='') -> list:
     """
@@ -131,10 +149,11 @@ def download_files(manifest_urls: list, destination: Union[Path, str]=Path('down
     for entry in url_list:
         for name, url in entry.items():
             try:
-                data = urllib.request.urlopen(url=url, timeout=20)
+                #data = urllib.request.urlopen(url=url, timeout=20)
                 file_path = Path(destination) / Path(name)
                 file_path.parent.mkdir(parents=True, exist_ok=True)
-                open(file_path, 'wb').write(data.read())
+                #open(file_path, 'wb').write(data.read())
+                curl(url=url, destination=file_path)
                 print(f"Collected {name} at {url}")
             except urllib.error.HTTPError as err:
                 print(f"Unable to download {name} from {url}")
@@ -185,7 +204,7 @@ def main():
             try:
                 latest = versions[0]
             except IndexError:
-                lastest = None
+                latest = None
 
             print(f"No argument provided for --dataset-version, using latest version from {args.dataset_name}, version = {latest}")
             print(f"Download will begin in 5 seconsd\nEnter ctrl c to cancel.")

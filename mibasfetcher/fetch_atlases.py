@@ -43,6 +43,12 @@ def check_atlas_md5(
     Check the md5 hash of a file and download a new version if the hash does not match.
     """
     atlas_changed = False
+    
+    if not Path(file_path).exists():
+        print(f"File {file_path} does not exist. Downloading from {atlases_url}")
+        curl(atlases_url, file_path)
+        atlas_changed = True
+
     atlases_json_md5 = md5(file_path)
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpfile = Path(tmpdir) / 'atlases.json'
@@ -188,7 +194,7 @@ def main():
 
     if args.update:
         # update manifest file
-        check_atlas_md5()
+        check_atlas_md5(args.manifest)
 
     if not args.dataset_name and not args.dataset_version and args.show_atlases:
         list_atlases(args.manifest)
